@@ -1,0 +1,36 @@
+$spacing:1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16;
+$spacing-axis:1,2,3,4,5;
+$direction:left,right,top,bottom;
+$direction-x:left,right;
+$direction-y:top,bottom;
+@each $space in $spacing{
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+    @each $direction in $direction{
+        .m#{str-slice($direction,0,1)}-#{$space}{
+            margin-#{$direction}:#{$space}rem;
+        }
+    };
+}
+
+@each $space in $spacing-axis{
+    @each $directionx in $direction-x{
+        .m#{x}-#{$space}{
+            margin:0rem #{$space}rem;
+        }
+        .m#{y}-#{$space}{
+            margin:#{$space}rem 0rem;
+        }
+    }
+}
+
+.mr-05{
+    margin-right: 0.5rem;
+}
+.ml-05{
+    margin-left: 0.5rem;
+}
+.my-05{
+    margin:0.5rem 0.5rem;
+}

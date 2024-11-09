@@ -1,0 +1,62 @@
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as screen;
+
+.home {
+  padding: 4rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  @include screen.responsive(xs){
+    padding:0rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-contents {
+    max-width: 30rem;
+    margin-left: 4rem;
+    padding: 1rem;
+
+    @include screen.responsive(xs){
+      margin-left: 0;
+  }
+
+
+    &_heading {
+      font-size: 2.4rem;
+      font-weight: 600;
+      @include screen.responsive(xs){
+        font-size: 1.8rem;
+      }
+
+      &--ta {
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: var.$font-malar;
+        color: #fff;
+        @include screen.responsive(xs){
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &_desc {
+      font-size: 1.1rem;
+      color: grey;
+      line-height: 1.7rem;
+      @include screen.responsive(xs){
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  &-img {
+    width: 35rem;
+    @include screen.responsive(xs){
+      margin: 0px auto;
+    }
+  }
+}

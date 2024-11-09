@@ -1,0 +1,111 @@
+@use "../abstract/functions" as func;
+@use "../abstract/mixins" as screen;
+.courses{
+    background-color:func.theme-colors("primary");
+    padding: 7rem 16rem;
+    @include screen.responsive(xs){
+        padding: 2rem 2rem;
+        overflow: hidden;
+    }
+    
+    &-header{
+        text-align: center;
+
+        h2{
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 10px;
+            @include screen.responsive(xs){
+                font-size: 1.4rem;
+                margin-bottom: 4px;
+            }
+        }
+        p{
+            color:rgb(223, 220, 220);
+            font-weight: 500;
+
+            @include screen.responsive(xs){
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    &-items{
+        display: flex;
+        margin: 2.8rem 0;
+        justify-content: space-between;
+        align-items: center;
+        @include screen.responsive(xs){
+            flex-direction: column;
+            margin-top: 1.2rem;
+        }
+
+
+        &-item{
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            max-width: 360px;
+            cursor: pointer;
+            @include screen.responsive(xs){
+                max-width: 100%;
+                margin: 1rem 0rem;
+            }
+    
+            &:hover{
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Black box-shadow */
+            }
+            &-head{
+                
+                &-img{
+                    width:360px;
+                }
+            }
+
+            &-body{
+                padding: 1.7rem;
+                h4{
+                    font-size: 1.6rem;
+                    color: #000;
+                    @include screen.responsive(xs){
+                       font-size: 1.4rem;
+                    }
+            
+                }
+                p{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: grey;
+                    margin-top: 12px;
+                    line-height: 1.5;
+                    @include screen.responsive(xs){
+                        font-size: 0.9rem;
+                        line-height: 2;
+                        font-weight: 500;
+                    }
+            
+                }
+            }
+        }
+    }
+
+    &-footer{
+        text-align: center;
+        margin-top: 3rem;
+        @include screen.responsive(xs){
+            margin-top: 1.1rem;
+        }
+
+        p{
+            font-size: 1.1rem;
+            color: rgb(210, 209, 209);
+            @include screen.responsive(xs){
+                font-size: 0.9rem;
+            }
+    
+    }
+    &-link{
+        color:#fff;
+    }
+    }
+}

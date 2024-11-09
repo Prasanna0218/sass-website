@@ -1,0 +1,58 @@
+@use "../abstract/mixins" as screen;
+@keyframes color-change {
+    0%{
+        color: #eb4a7f;
+    }
+    50%{
+        color: #e7d804;
+    }
+    100%{
+        color: green;
+    }
+}
+
+@keyframes rotation{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+@keyframes rotateemoji {
+    0%{
+        rotate:0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+@keyframes sizebig{
+    0%{
+        font-size: 3rem;
+    }
+    100%{
+        font-size: 3.5rem;
+    }
+}
+@include screen.responsive(xs){
+    @keyframes sizebig {
+        0%{
+            font-size: 1.6rem;
+        }
+        100%{
+            font-size:1.8rem;
+        }        
+    }
+}
+
+@keyframes borderrotate{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}

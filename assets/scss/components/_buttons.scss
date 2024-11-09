@@ -1,0 +1,31 @@
+@use "../abstract/functions" as func;
+
+.btn{
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &_primary{
+        background-color: func.theme-colors("primary");
+        color: #fff !important;
+        transition: 0.3s linear;
+        &:hover{
+            background-color: func.theme-colors("primary-hover");
+        }
+
+        &_outlined{
+            background-color: #fff;
+            border: 2px solid func.theme-colors("primary");
+            color: func.theme-colors("primary");
+            transition: 0.3s linear;
+            font-weight: 600;
+
+            &:hover{
+                background-color: func.theme-colors("primary");
+                color: #fff;
+            }
+        }
+    }
+}

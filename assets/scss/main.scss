@@ -1,0 +1,26 @@
+// Correct Example
+@import "./base/reset";
+
+//utility
+@import "./utility/animations";
+@import "./utility/spacing";
+@import "./utility/background-elements";
+
+//componets
+@import "./components/header";
+@import "./components/buttons";
+@import "./components/badges";
+@import "./components/forms";
+@import "./components/footer";
+
+
+//pages
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/roadmap";
+@import "./pages/courses";
+@import "./pages/contactus";
+
+
+//global
+@import "./global/img-responsive";

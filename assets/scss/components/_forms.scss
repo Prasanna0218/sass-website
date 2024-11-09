@@ -1,0 +1,46 @@
+@use "../abstract/functions" as func;
+@use "../abstract/mixins" as screen;
+.form-contents{
+    flex-grow: 1;
+   
+    h2{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        @include screen.responsive(xs){
+            font-size: 1rem;
+            margin-bottom:0.2rem;
+        }
+    }
+    p{
+        color: grey;
+        font-weight: 400;
+        @include screen.responsive(xs){
+            font-size: 0.8rem;
+        }
+    }
+    .input-designs{
+        width: 100%;
+        padding: 0.6rem 1.7rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        background-color: rgb(224, 224, 224);
+        font-weight: 500;
+        @include screen.responsive(xs){
+            font-size: 0.8rem;
+        }
+
+        &:focus{
+            border: 2px solid func.theme-colors("primary");
+        }
+    }
+
+}
+
+
+.resize-none{
+    resize: none;
+}
+.bp{
+    padding: 0.6rem 2rem;
+}

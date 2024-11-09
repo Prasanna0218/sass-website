@@ -1,0 +1,67 @@
+@use "../abstract/variables" as var;
+@use "../abstract/functions" as func;
+@use "../abstract/mixins" as screen;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9rem;
+  @include screen.responsive(xs){
+      padding: 0.8rem 1.7rem;
+  }
+  &-brand{
+    @include screen.responsive(xs){
+      font-size: 1.5rem;
+  }
+
+  }
+  &-brand_ta {
+    font-family: var.$font-malar;
+    font-weight: 800;
+    font-size: 1.8rem;
+    @include screen.responsive(xs){
+      font-size: 1.2rem;
+      font-weight: 700;
+  }
+  }
+  &-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    @include screen.responsive(xs){
+      display: none;
+    }
+
+    &_item {
+      margin-right: 2rem;
+
+      & > a {
+        color: #000;
+        font-size: 0.92rem;
+        font-weight: 600;
+        transition: 0.2s linear;
+        &:hover {
+          color: func.theme-colors("primary-hover");
+        }
+        &.active {
+          color: func.theme-colors("primary");
+        }
+      }
+    }
+  }
+  &{
+    border-bottom: 2px solid #eee;
+  }
+}
+.color-change{
+    animation: color-change 10s infinite;
+    transition: 0.5s linear;
+}
+
+.bar-menu{
+  font-size: 1.5rem;
+  align-items: center;
+  margin-left: 2rem;
+  margin-top: 0.2rem;
+}

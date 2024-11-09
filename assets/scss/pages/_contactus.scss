@@ -1,0 +1,25 @@
+@use "../abstract/mixins" as screen;
+.contact{
+    background-color:rgb(224, 224, 224);
+    padding: 7rem 20rem;
+
+    @include screen.responsive(xs){
+        padding: 2rem 2rem;
+    }
+
+
+    &-card{
+        background-color: #fafafa;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgb(83, 83, 83);
+        @include screen.responsive(xs){
+            flex-direction: column;
+            padding: 2rem 1rem;
+        }
+
+    }
+}
